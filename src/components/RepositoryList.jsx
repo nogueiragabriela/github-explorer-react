@@ -5,6 +5,7 @@ import '../styles/repositories.scss';
 
 
 export function RepositoryList() {
+    
     const [repositories, setRepositories] = useState([]);
 
     useEffect(() => {
@@ -12,8 +13,6 @@ export function RepositoryList() {
         .then(response => response.json())
         .then(data => setRepositories(data))
     }, []);
-
-
 
 
     return (
